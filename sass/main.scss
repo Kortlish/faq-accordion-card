@@ -18,6 +18,7 @@
 	background-color: $lt-grayish-blue;
 
 	.image-sec {
+		user-select: none;
 		position: absolute;
 		top: -1.5em;
 		left: 50%;
@@ -45,7 +46,11 @@
 
 	.accordion {
 		padding: 0 2em;
+
 		.accordion-item {
+			button {
+				cursor: pointer;
+			}
 			.accordion-title {
 				min-width: 90%;
 				padding: 0.8em;

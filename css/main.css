@@ -56,6 +56,10 @@ img {
 }
 
 .card .image-sec {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   top: -1.5em;
   left: 50%;
@@ -81,6 +85,10 @@ img {
 
 .card .accordion {
   padding: 0 2em;
+}
+
+.card .accordion .accordion-item button {
+  cursor: pointer;
 }
 
 .card .accordion .accordion-item .accordion-title {
