@@ -1,5 +1,3 @@
-// let accordionBtn = document.querySelector('.accordion-title');
-
 document.querySelectorAll('.accordion-title').forEach((item) => {
 	item.addEventListener('click', (event) => {
 		//handle click
