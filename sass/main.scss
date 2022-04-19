@@ -1,0 +1,190 @@
+@import 'colors';
+@import 'general';
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	position: relative;
+	border-radius: 2em;
+	width: 88%;
+	max-width: 92em;
+	padding: 1rem 0;
+	background-color: $lt-grayish-blue;
+
+	.image-sec {
+		position: absolute;
+		top: -1.5em;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 24em;
+		min-height: 18em;
+		background-image: url(/images/illustration-woman-online-mobile.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+
+		.box-image {
+			display: none;
+		}
+	}
+
+	.faq-sec {
+		.title-faq {
+			margin-top: 4em;
+			font-size: 2rem;
+			padding: 2em 0 1em;
+			// padding: 2em 0 1.5em;
+			text-align: center;
+		}
+	}
+
+	.accordion {
+		padding: 0 2em;
+		.accordion-item {
+			.accordion-title {
+				min-width: 90%;
+				padding: 0.8em;
+				text-align: left;
+				font-size: 1.2rem;
+				border: none;
+				background-color: transparent;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0;
+			}
+
+			.accordion-title::after {
+				content: '';
+				display: block;
+				width: 0.625em;
+				height: 0.625em;
+				background-image: url(/images/icon-arrow-down.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				transition: transform 0.2s ease-in-out;
+			}
+
+			.accordion-title:focus {
+				border: none;
+				outline: 1px solid $xdk-desaturated-blue;
+			}
+
+			// .open {
+			// 	font-weight: bold;
+			// }
+
+			.accordion-title.open {
+				font-weight: bold;
+			}
+
+			.accordion-title.open::after {
+				transform: rotate(180deg);
+			}
+
+			.accordion-collapse {
+				.accordion-content {
+					font-size: 1.1em;
+					line-height: 1.4;
+					padding-bottom: 1rem;
+					padding: 1rem 0;
+				}
+			}
+
+			.accordion-collapse.open {
+				display: block;
+			}
+
+			.collapse {
+				display: none;
+			}
+
+			.collapsing {
+				height: 0;
+				overflow: hidden;
+				transition: height 300ms ease;
+			}
+		}
+	}
+}
+
+@media (min-width: 800px) {
+	.card {
+		display: flex;
+		padding: 3rem 0;
+
+		section {
+			flex: 1;
+		}
+
+		.image-sec {
+			position: relative;
+			top: 0;
+			left: 0;
+			min-width: 43em;
+			min-height: 36em;
+			padding: 8em 0 8em;
+			background-image: url(/images/illustration-woman-online-desktop.svg);
+			background-size: contain;
+			background-position: -8em center;
+			transform: translate(0, 0);
+			.box-image {
+				display: block;
+				position: absolute;
+				top: 55.5%;
+				left: 0.25em;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.faq-sec {
+			padding: 0 0 9em 0;
+
+			.title-faq {
+				margin-top: 0;
+				text-align: left;
+				font-size: 3rem;
+				padding: 1.5em 0 0.8em;
+			}
+		}
+
+		.accordion {
+			padding: 0;
+			.accordion-item {
+				.accordion-title {
+					min-width: 75%;
+					max-width: 80%;
+					padding: 0.8em 0;
+					text-align: left;
+					font-size: 1.6rem;
+					border: none;
+					background-color: transparent;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-right: 0;
+				}
+
+				.accordion-title::after {
+					content: '';
+					display: block;
+					width: 0.625em;
+					height: 0.625em;
+					background-image: url(/images/icon-arrow-down.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+
+				.accordion-content {
+					width: 80%;
+				}
+			}
+		}
+	}
+}

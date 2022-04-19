@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+  min-height: 100vh;
+  color: #1d1e35;
+}
+
+img {
+  max-width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  position: relative;
+  border-radius: 2em;
+  width: 88%;
+  max-width: 92em;
+  padding: 1rem 0;
+  background-color: #e7e7e9;
+}
+
+.card .image-sec {
+  position: absolute;
+  top: -1.5em;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 24em;
+  min-height: 18em;
+  background-image: url(/images/illustration-woman-online-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card .image-sec .box-image {
+  display: none;
+}
+
+.card .faq-sec .title-faq {
+  margin-top: 4em;
+  font-size: 2rem;
+  padding: 2em 0 1em;
+  text-align: center;
+}
+
+.card .accordion {
+  padding: 0 2em;
+}
+
+.card .accordion .accordion-item .accordion-title {
+  min-width: 90%;
+  padding: 0.8em;
+  text-align: left;
+  font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.card .accordion .accordion-item .accordion-title::after {
+  content: '';
+  display: block;
+  width: 0.625em;
+  height: 0.625em;
+  background-image: url(/images/icon-arrow-down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.card .accordion .accordion-item .accordion-title:focus {
+  border: none;
+  outline: 1px solid #1d1e35;
+}
+
+.card .accordion .accordion-item .accordion-title.open {
+  font-weight: bold;
+}
+
+.card .accordion .accordion-item .accordion-title.open::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card .accordion .accordion-item .accordion-collapse .accordion-content {
+  font-size: 1.1em;
+  line-height: 1.4;
+  padding-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.card .accordion .accordion-item .accordion-collapse.open {
+  display: block;
+}
+
+.card .accordion .accordion-item .collapse {
+  display: none;
+}
+
+.card .accordion .accordion-item .collapsing {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 300ms ease;
+  transition: height 300ms ease;
+}
+
+@media (min-width: 800px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 3rem 0;
+  }
+  .card section {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .card .image-sec {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 43em;
+    min-height: 36em;
+    padding: 8em 0 8em;
+    background-image: url(/images/illustration-woman-online-desktop.svg);
+    background-size: contain;
+    background-position: -8em center;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .card .image-sec .box-image {
+    display: block;
+    position: absolute;
+    top: 55.5%;
+    left: 0.25em;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .card .faq-sec {
+    padding: 0 0 9em 0;
+  }
+  .card .faq-sec .title-faq {
+    margin-top: 0;
+    text-align: left;
+    font-size: 3rem;
+    padding: 1.5em 0 0.8em;
+  }
+  .card .accordion {
+    padding: 0;
+  }
+  .card .accordion .accordion-item .accordion-title {
+    min-width: 75%;
+    max-width: 80%;
+    padding: 0.8em 0;
+    text-align: left;
+    font-size: 1.6rem;
+    border: none;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0;
+  }
+  .card .accordion .accordion-item .accordion-title::after {
+    content: '';
+    display: block;
+    width: 0.625em;
+    height: 0.625em;
+    background-image: url(/images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .card .accordion .accordion-item .accordion-content {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
